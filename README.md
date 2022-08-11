@@ -4,12 +4,15 @@
 
 # Run in Dev
 1. Clone repo
-2. run 
+```
+git clone git@github.com:Deluxer/nest-pokedex.git
+```
+
+2. install
 ```
 yarn install
 ```
 3. Install Nest CLI
-
 ```
 npm i -g @nest/cli
 ```
@@ -19,6 +22,11 @@ npm i -g @nest/cli
 docoker-compose up -d
 ```
 
-##Stack used
+5. Seed population Database
+```
+{{url}}/api/v2/seed
+```
+
+## Stack used
 * MongoDB
 * Nest
