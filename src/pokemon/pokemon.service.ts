@@ -26,7 +26,8 @@ export class PokemonService {
   }
 
   findAll() {
-    return `This action returns all pokemon`;
+    const pokemon = this.pokemonModel.find();
+    return pokemon;
   }
 
   async findOne(param: string) {
