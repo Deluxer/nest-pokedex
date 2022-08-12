@@ -35,6 +35,10 @@ yarn start:dev
 ```
 {{url}}/api/v2/seed
 ```
+* Start with docker
+```
+docker-compose -f docker-compose.dev.yaml up
+```
 
 ## Stack used
 * MongoDB
@@ -52,10 +56,14 @@ yarn start:dev
 ```
 docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
 ```
+* After builded, just start with docker
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up
+```
 
 # Notes
 
-Heroku deploy without save changes
+Heroku deploy without save changes in repository
 ```
 git commit --allow-empty -m "Trgger heroku deploy"
 git push heroku main
