@@ -19,7 +19,7 @@ npm i -g @nest/cli
 
 4. Create Database with docker
 ```
-docoker-compose up -d
+docker-compose up -d
 ```
 
 5. copy ```.env.example``` and rename to ```.env```
@@ -39,3 +39,24 @@ yarn start:dev
 ## Stack used
 * MongoDB
 * Nest
+
+### Dependencies
+* Joi
+* Mongoose
+* Axios
+
+# Build production
+1. Create file ``` .env.prod```
+2. Set enviroment variables
+3. Create new image
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+# Notes
+
+Heroku deploy without save changes
+```
+git commit --allow-empty -m "Trgger heroku deploy"
+git push heroku main
+```
