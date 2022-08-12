@@ -22,7 +22,16 @@ npm i -g @nest/cli
 docoker-compose up -d
 ```
 
-5. Seed population Database
+5. copy ```.env.example``` and rename to ```.env```
+
+6. Set enviroment variables
+
+7. Start project
+```
+yarn start:dev
+```
+
+8. Seed, populate the database
 ```
 {{url}}/api/v2/seed
 ```
