@@ -2,6 +2,7 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
+
 # Run in Dev
 1. Clone repo
 ```
@@ -24,20 +25,32 @@ docker-compose up -d
 
 5. copy ```.env.example``` and rename to ```.env```
 
-6. Set enviroment variables
+6. Set environment variables
 
 7. Start project
 ```
 yarn start:dev
 ```
 
-8. Seed, populate the database
+8. Seed, populate database
 ```
 {{url}}/api/v2/seed
 ```
 * Start with docker
 ```
 docker-compose -f docker-compose.dev.yaml up
+```
+
+# Build production
+1. Create file ``` .env.prod```
+2. Set environment variables
+3. Create new image
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+* After build, just start with docker
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up
 ```
 
 ## Stack used
@@ -48,18 +61,6 @@ docker-compose -f docker-compose.dev.yaml up
 * Joi
 * Mongoose
 * Axios
-
-# Build production
-1. Create file ``` .env.prod```
-2. Set enviroment variables
-3. Create new image
-```
-docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
-```
-* After builded, just start with docker
-```
-docker-compose -f docker-compose.prod.yaml --env-file .env.prod up
-```
 
 # Notes
 
